@@ -6,4 +6,8 @@ createdb:
 	docker exec -it postgres17 createdb --username=root --owner=root chatdb
 dropdb:
 	docker exect -it dropdb chatdb
-.PHONY:postgresinit postgres createdb dropdb
+migrateup:
+	migrate -path db/migrations -database "postgres://root:Pauline@1079@localhost:5433/chatdb?sslmode=disable" -verbose up
+migratedown:
+	migrate -path db/migrations -database "postgres://root:Pauline@1079@localhost:5433/chatdb?sslmode=disable" -verbose down
+.PHONY:postgresinit postgres createdb dropdb migrateup migratedown

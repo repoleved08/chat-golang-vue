@@ -3,7 +3,6 @@
 </script>
 
 <template>
-
     <div class="flex items-start gap-2.5">
         <img class="w-8 h-8 rounded-full" src="https://flowbite/docs/images/people/profile-picture-3.jpg" alt="Jese image">
         <div
@@ -51,5 +50,4 @@
             </ul>
         </div>
     </div>
-
 </template>
